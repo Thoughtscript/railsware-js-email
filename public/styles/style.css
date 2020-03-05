@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: white;
+    background: -webkit-linear-gradient(to right, white, lightcyan);
+    background: linear-gradient(to right, white, lightcyan);
+}
+
+.flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+header {
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to left, #4A00E0, #8E2DE2);
+    background: linear-gradient(to left, #4A00E0, #8E2DE2);
+    height: 115px;
+    opacity: .8;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 2px 2px 1px lightgray;
+}
+
+header > h1 {
+    color: white;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    opacity: .9;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 35px;
+    left: 35px;
+}
+
+main {
+    position: relative;
+    height: 70%;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+}
+
+main > div {
+    border-radius: 25px;
+    border: 3px solid #2fd6ff;
+    width: 200px;
+    height: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 25px 0;
+    line-height: 12px;
+    color: black;
+    box-shadow: 1px 2px 2px 1px lightgray;
+}
+
+main > div:hover, footer > ul > li > a:hover {
+    opacity: .3;
+}
+
+footer > div:hover {
+    box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    opacity: .9;
+    height: 125px;
+}
+
+footer > ul {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+footer > ul > li {
+    position: relative;
+    top: 50px;
+    display: block;
+    height: 75px;
+    width: 16%;
+    text-align: center;
+    align-content: center;
+}
+
+footer > ul > li > a {
+    color: #2fd6ff;
+    text-decoration : none;
+    text-transform: lowercase;
+}

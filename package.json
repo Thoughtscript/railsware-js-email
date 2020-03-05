@@ -1,0 +1,33 @@
+{
+  "name": "js-email",
+  "version": "1.0.0",
+  "description": "Railsware email validation using server-side JavaScript",
+  "scripts": {
+    "start": "node main.js",
+    "stop-win": "Taskkill /IM node.exe /F",
+    "stop-linux": "killall node"
+  },
+  "engines": {
+    "node": "=13.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "Node",
+    "Mandrill",
+    "Sendgrid",
+    "Mailgun",
+    "AWS"
+  ],
+  "author": "Adam I. Gerard",
+  "devDependencies": {},
+  "dependencies": {
+    "aws-sdk": "=2.630.0",
+    "mailgun.js": "=2.0.1",
+    "mandrill-api": "=1.0.45",
+    "sendgrid": "=5.2.3"
+  }
+}
