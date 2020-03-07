@@ -8,7 +8,7 @@ This repo demonstrates how to use NodeJS for validation, to batch, and send emai
 
 > Check out the Railsware blog to learn several great [ways to send emails using](https://blog.mailtrap.io/react-send-email/) using handy client frameworks like [React.js](https://reactjs.org), [Email.js](https://www.emailjs.com), and [Nodemailer](https://nodemailer.com/about/). 
 
-Note: All credentials supplied are dummy credentials!
+**Note:** All credentials supplied are dummy credentials!
 
 ## Features
 
@@ -19,9 +19,10 @@ Note: All credentials supplied are dummy credentials!
     1. [Microsoft Azure Sendgrid STMP Relay](https://azuremarketplace.microsoft.com/marketplace/apps/SendGrid.SendGrid)
     1. [Mailgun](https://www.mailgun.com)
 
-1. Email attachment handling and batching
-1. Email form field, escaping, and RegEx validation
-1. Simple SMS Gateway helper for sending texts (included)
+1. Email attachment handling and batching via the above
+1. Simple [SMS Gateway helper](server/sms) for sending texts
+
+> Email and HTML template validation techniques are described in the [article]()!
 
 ## Use
 
@@ -53,6 +54,14 @@ npm run stop-linux
 
 ### Email API
 
+> POST http://localhost:7777/email/ses
+
+> POST http://localhost:7777/email/azure
+
+> POST http://localhost:7777/email/mandrill
+
+> POST http://localhost:7777/email/mailgun
+
 Each email endpoint supports `basic`, `attachment`, `batch` like so:
 
 ```JSON
@@ -61,13 +70,7 @@ Each email endpoint supports `basic`, `attachment`, `batch` like so:
 }
 ```
 
-> POST http://localhost:7777/email/ses
-
-> POST http://localhost:7777/email/azure
-
-> POST http://localhost:7777/email/mandrill
-
-> POST http://localhost:7777/email/mailgun
+**Note:** The Mandrill endpoint only supports `basic` emails.
 
 ### SMS
 

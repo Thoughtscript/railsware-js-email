@@ -16,13 +16,13 @@ module.exports = {
         return r
     },
     sendBatchEmail: async () => {
-        console.info(`Batch email sent via Mandrill!`)
-        let r = await "Success"
+        console.info(`Mandrill batch email is not supported!`)
+        let r = await "Mandrill batch email is not supported!"
         return r
     },
     sendEmailWithAttachment: async () => {
-        console.info(`Attachment email sent via Mandrill!`)
-        let r = await "Success"
+        console.info(`Mandrill batch email is not supported!`)
+        let r = await "Mandrill batch email is not supported!"
         return r
     }
 }
