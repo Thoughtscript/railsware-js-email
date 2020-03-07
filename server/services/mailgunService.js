@@ -6,22 +6,23 @@
  * Mailgun SDK helpers.
  */
 
-//const H = require('../email/mailgun')
+const H = require('../email/mailgun'),
+    C = require('../../config').EMAIL
 
 module.exports = {
     sendBasicEmail: async () => {
-        console.info(`Basic email sent via Mailgun!`)
-        let r = await null
+        H.sendBasicEmail(C.TEST_EMAIL, "Mailgun basic email", "Mailgun basic email")
+        let r = await "Success"
         return r
     },
     sendBatchEmail: async () => {
-        console.info(`Batch email sent via Mailgun!`)
-        let r = await null
+        H.sendBasicEmail(C.TEST_EMAIL, "Mailgun batch email", "Mailgun batch email")
+        let r = await "Success! Make sure to create a mailing list alias!"
         return r
     },
     sendEmailWithAttachment: async () => {
-        console.info(`Attachment email sent via Mailgun!`)
-        let r = await null
+        H.sendEmailWithAttachment(C.TEST_EMAIL, "Mailgun attachment email", "Mailgun attachment email")
+        let r = await "Success"
         return r
     }
 }

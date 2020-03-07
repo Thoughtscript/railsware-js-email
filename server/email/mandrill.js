@@ -6,15 +6,18 @@
  * Mandrill SDK helpers.
  */
 
-const CLIENT = new require('mandrill-api/mandrill')(require('../../config').EMAIL.MANDIRLL)
+const M = require('mandrill-api/mandrill'),
+    C = require('../../config').EMAIL.MANDIRLL
+
+const CLIENT = new M.Mandrill(C.API_KEY)
 
 module.exports = {
-    sendMail: (to, subject, text) => {
+
+    sendBasicEmail: (to, from, subject, text) => {
         const message = {
             "text": text,
             "subject": subject,
-            "from_email": "message.from_email@example.com",
-            "from_name": "Test User",
+            "from_email": from,
             "to": [{
                 "email": to,
                 "type": "to"
@@ -27,7 +30,7 @@ module.exports = {
                 "ip_pool": "Main Pool",
                 "send_at": new Date()
             },
-            result => console.log(result),
+            result => console.info(`Basic email sent via Mandrill ${JSON.stringify(result)}`),
             e => console.error(`Exception encountered: ${e}!`))
     }
 

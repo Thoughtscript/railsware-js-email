@@ -8,6 +8,8 @@ This repo demonstrates how to use NodeJS for validation, to batch, and send emai
 
 > Check out the Railsware blog to learn several great [ways to send emails using](https://blog.mailtrap.io/react-send-email/) using handy client frameworks like [React.js](https://reactjs.org), [Email.js](https://www.emailjs.com), and [Nodemailer](https://nodemailer.com/about/). 
 
+Note: All credentials supplied are dummy credentials!
+
 ## Features
 
 1. Email SDK's, frameworks, and tools:
@@ -29,12 +31,14 @@ Sign up for these email-related accounts:
 1. [AWS Amazon SES](https://aws.amazon.com/ses/)
 1. [Microsoft Azure Sendgrid STMP Relay](https://azuremarketplace.microsoft.com/marketplace/apps/SendGrid.SendGrid)
 1. [Mailgun](https://www.mailgun.com)
+
+> Step-by-step instructions to do so are provided in the [article]()!
     
 Configure settings in [config.js](/config.js)!
 
 Start it up:
 
-```JSON
+```BASH
 npm i
 npm run start
 ```
@@ -43,7 +47,7 @@ npm run start
 
 Shut it down:
 
-```JSON
+```BASH
 npm run stop-linux
 ```
 
@@ -340,4 +344,4 @@ Supplied to create a more realistic example. Be forewarned:
 
 ## License
 
-MIT Licensed!
+[MIT Licensed](https://opensource.org/licenses/MIT) - [view the license](LICENSE.md).

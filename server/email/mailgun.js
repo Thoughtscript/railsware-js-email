@@ -7,23 +7,40 @@
  */
 
 const C = require('../../config').EMAIL.MAILGUN,
+    MG = require('mailgun.js'),
+    FS = require('fs'),
+    P = require('path')
 
-    CLIENT = new require('mailgun.js').client({
-        username: C.USERNAME,
-        key: C.API_KEY || '',
-        public_key: c.PUBLIC_KEY || 'pubkey-yourkeyhere'
-    })
+const CLIENT = MG.client({
+    username: 'api',
+    key: C.API_KEY,
+    public_key: C.PUBLIC_KEY
+});
 
 module.exports = {
 
-    sendMail: (to, subject, text) => {
-        CLIENT.messages.create(domain, {
+    sendBasicEmail: async (to, subject, text) => {
+
+        CLIENT.messages.create(C.DOMAIN, {
             from: "test@example.com",
-            to: to,
+            to: [to],
             subject: subject,
             text: text
         })
-            .then(msg => console.log(msg))
+            .then(msg => console.info(`Basic email sent via Mailgun ${JSON.stringify(msg)}`))
+            .catch(err => console.error(err))
+    },
+
+    sendEmailWithAttachment: (to, subject, text) => {
+
+        CLIENT.messages.create(C.DOMAIN, {
+            from: "test@example.com",
+            to: [to],
+            subject: subject,
+            html: `<h1>${text}</h1>`,
+            attachment: FS.createReadStream(P.join(__dirname, '../', 'data/attachment.png'))
+        })
+            .then(msg => console.info(`Attachment email sent via Mailgun ${JSON.stringify(msg)}`))
             .catch(err => console.error(err))
     }
 

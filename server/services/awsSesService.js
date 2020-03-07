@@ -6,22 +6,23 @@
  * AWS SES SDK helpers.
  */
 
-//const H = require('../email/awsSes')
+const H = require('../email/awsSes'),
+    C = require('../../config').EMAIL
 
 module.exports = {
     sendBasicEmail: async () => {
-        console.info(`Basic email sent via AWS!`)
-        let r = await null
+        H.sendBasicEmail(C.TEST_EMAIL, C.TEST_EMAIL,"AWS SES basic mail", "AWS SES basic email")
+        let r = await "Success"
         return r
     },
     sendBatchEmail: async () => {
-        console.info(`Batch email sent via AWS!`)
-        let r = await null
+        H.sendBatchEmail(C.AWS.BULK_LIST, C.TEST_EMAIL,"AWS Batch email", "AWS SES email")
+        let r = await "Success"
         return r
     },
     sendEmailWithAttachment: async () => {
-        console.info(`Attachment email sent via AWS!`)
-        let r = await null
+        H.sendEmailWithAttachment(C.TEST_EMAIL, C.TEST_EMAIL,"AWS SES attachment email", "AWS SES attachment email")
+        let r = await "Success"
         return r
     }
 }

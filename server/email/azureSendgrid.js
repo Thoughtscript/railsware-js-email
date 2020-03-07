@@ -7,23 +7,67 @@
  */
 
 const C = require('../../config').EMAIL.AZURE_SENDGRID,
-    S = require('sendgrid'),
-    CLIENT = S(C.USERNAME, C.PASSWORD)
+    FS = require('fs'),
+    P = require('path')
+
+const CLIENT = require('@sendgrid/mail')
+
+CLIENT.setApiKey(C.API_KEY)
 
 module.exports = {
-    sendMail: (to, subject, text) => {
+    sendBasicEmail: (to, subject, text) => {
 
-        const email = new S.Email({
+        const email = {
             to: to,
             from: 'test@email.com',
             subject: subject,
             text: text
-        })
+        }
 
-        CLIENT.send(email, (err, json) => {
-            if (err) return console.error(`Exception encountered: ${err}!`)
-            console.info(`Email sent: ${email}!`)
-        })
+        CLIENT
+            .send(email)
+            .then(msg => {console.info(`Basic email sent via Azure and SendGrid! ${JSON.stringify(msg)}`)},
+                    err => console.error(`Exception encountered: ${err}!`))
+    },
+    sendEmailWithAttachment: (to, subject, text) => {
+
+        const attachment = FS.readFileSync(P.join(__dirname, '../', 'data/attachment.png')).toString("base64")
+
+        const email = {
+            to: to,
+            from: 'test@email.com',
+            subject: subject,
+            text: text,
+            attachments: [{
+                content: attachment,
+                filename: "attachment.png",
+                type: "application/png",
+                disposition: "attachment"
+            }]
+        }
+
+        CLIENT
+            .send(email)
+            .then(msg => {console.info(`Attachment email sent via Azure and SendGrid! ${JSON.stringify(msg)}`)},
+                err => console.error(`Exception encountered: ${err}!`))
+    },
+    sendBatchEmail: (to, subject, text) => {
+
+        const messages = [{
+            to: to,
+            from: 'test@email.com',
+            subject: subject,
+            html: `<h1>${text}#1</h1>`,
+        }, {
+            to: to,
+            from: 'test@email.com',
+            subject: subject,
+            html: `<h1>${text}#2</h1>`,
+        }]
+
+        CLIENT
+            .send(messages)
+            .then(msg => {console.info(`Batch email sent via Azure and SendGrid! ${JSON.stringify(msg)}`)},
+                err => console.error(`Exception encountered: ${err}!`))
     }
-
 }

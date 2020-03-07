@@ -6,22 +6,23 @@
  * Mandrill SDK helpers.
  */
 
-//const H = require('../email/mandrill')
+const H = require('../email/mandrill'),
+    C = require('../../config').EMAIL.MANDIRLL
 
 module.exports = {
     sendBasicEmail: async () => {
-        console.info(`Basic email sent via Mandrill!`)
-        let r = await null
+        H.sendBasicEmail(C.VERIFIED_EMAIL, C.VERIFIED_EMAIL, "Mandrill basic email", "Mandrill basic email")
+        let r = await "Success"
         return r
     },
     sendBatchEmail: async () => {
         console.info(`Batch email sent via Mandrill!`)
-        let r = await null
+        let r = await "Success"
         return r
     },
     sendEmailWithAttachment: async () => {
         console.info(`Attachment email sent via Mandrill!`)
-        let r = await null
+        let r = await "Success"
         return r
     }
 }

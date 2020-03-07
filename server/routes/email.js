@@ -20,8 +20,8 @@ module.exports = {
             console.info(`${req.connection.remoteAddress} connected to Email API!`)
             res.setHeader('Content-type', 'application/json')
 
-            if (url === E[0]) {
-                if (req.method === "POST") {
+            if (url === E[0] || url === E[1]) {
+                if (req.method === "POST" || req.method.toLowerCase() === "post") {
                     return await new Promise((resolve, reject) => {
                         let bodyData = ''
                         req.on('data', postData => {bodyData += postData})
@@ -50,7 +50,7 @@ module.exports = {
                 }
             }
 
-            if (url === E[1]) {
+            if (url === E[2] || url === E[3]) {
                 if (req.method === "POST") {
                     return await new Promise((resolve, reject) => {
                         let bodyData = ''
@@ -80,7 +80,7 @@ module.exports = {
                 }
             }
 
-            if (url === E[2]) {
+            if (url === E[4] || url === E[5]) {
                 if (req.method === "POST") {
                     return await new Promise((resolve, reject) => {
                         let bodyData = ''
@@ -110,7 +110,7 @@ module.exports = {
                 }
             }
 
-            if (url === E[3]) {
+            if (url === E[6] || url === E[7]) {
                 if (req.method === "POST") {
                     return await new Promise((resolve, reject) => {
                         let bodyData = ''

@@ -3,7 +3,7 @@
 /**
  * @author - Adam In Tae Gerard - https://www.linkedin.com/in/adamintaegerard/
  *
- * MIME constants.
+ * MIME and route constants.
  */
 
 const MIME_TYPE_MAP = {

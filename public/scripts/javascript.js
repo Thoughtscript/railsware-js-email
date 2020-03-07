@@ -33,22 +33,22 @@ const asyncDataPost = (url, data, token) => {
 window.onload = () => {
 
     el("ses").addEventListener("click", e => {
-        asyncDataPost(API("ses"), {"email": "basic"})
+        asyncDataPost(API("ses"), JSON.stringify({"email": "basic"}))
         e.preventDefault()
     })
 
     el("azure").addEventListener("click", e => {
-        asyncDataPost(API("azure"), {"email": "basic"})
+        asyncDataPost(API("azure"), JSON.stringify({"email": "basic"}))
         e.preventDefault()
     })
 
     el("mandrill").addEventListener("click", e => {
-        asyncDataPost(API("mandrill"), {"email": "basic"})
+        asyncDataPost(API("mandrill"), JSON.stringify({"email": "basic"}))
         e.preventDefault()
     })
 
     el("mailgun").addEventListener("click", e => {
-        asyncDataPost(API("mailgun"), {"email": "basic"})
+        asyncDataPost(API("mailgun"), JSON.stringify({"email": "basic"}))
         e.preventDefault()
     })
 
