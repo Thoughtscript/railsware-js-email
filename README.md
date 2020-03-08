@@ -22,7 +22,7 @@ This repo demonstrates how to use NodeJS for validation, to batch, and send emai
 1. Email attachment handling and batching via the above
 1. Simple [SMS Gateway helper](server/sms) for sending texts
 
-> Email and HTML template validation techniques are described in the [article]()!
+> Email and HTML template validation techniques are described in the [article]()! Unit tests are [also provided](tests/index.js).
 
 ## Use
 
@@ -42,6 +42,7 @@ Start it up:
 ```BASH
 npm i
 npm run start
+npm run tests
 ```
 
 > By default, the http server will serve from http://localhost:7777
@@ -50,6 +51,7 @@ Shut it down:
 
 ```BASH
 npm run stop-linux
+nom run stop-linux
 ```
 
 ### Email API

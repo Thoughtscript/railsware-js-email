@@ -19,7 +19,7 @@ module.exports = {
 
         const email = {
             to: to,
-            from: 'test@email.com',
+            from: 'tests@email.com',
             subject: subject,
             text: text
         }
@@ -35,7 +35,7 @@ module.exports = {
 
         const email = {
             to: to,
-            from: 'test@email.com',
+            from: 'tests@email.com',
             subject: subject,
             text: text,
             attachments: [{
@@ -55,12 +55,12 @@ module.exports = {
 
         const messages = [{
             to: to,
-            from: 'test@email.com',
+            from: 'tests@email.com',
             subject: subject,
             html: `<h1>${text}#1</h1>`,
         }, {
             to: to,
-            from: 'test@email.com',
+            from: 'tests@email.com',
             subject: subject,
             html: `<h1>${text}#2</h1>`,
         }]

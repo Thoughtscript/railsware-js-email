@@ -22,7 +22,7 @@ module.exports = {
     sendBasicEmail: async (to, subject, text) => {
 
         CLIENT.messages.create(C.DOMAIN, {
-            from: "test@example.com",
+            from: "tests@example.com",
             to: [to],
             subject: subject,
             text: text
@@ -34,7 +34,7 @@ module.exports = {
     sendEmailWithAttachment: (to, subject, text) => {
 
         CLIENT.messages.create(C.DOMAIN, {
-            from: "test@example.com",
+            from: "tests@example.com",
             to: [to],
             subject: subject,
             html: `<h1>${text}</h1>`,

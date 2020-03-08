@@ -14,7 +14,7 @@ module.exports = {
     WORKERS: 4,
     PUBLIC: "public",
     EMAIL: {
-        // May need to add to list of verified test email account in provider dashboard
+        // May need to add to list of verified tests email account in provider dashboard
         TEST_EMAIL: "example@email.com",
         AWS: {
             // These need to be added to the verified email identities list in AWS

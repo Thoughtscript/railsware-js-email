@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node main.js",
     "stop-win": "Taskkill /IM node.exe /F",
-    "stop-linux": "killall node"
+    "stop-linux": "killall node",
+    "tests": "node tests/index.js"
   },
   "engines": {
     "node": "=13.8.0"

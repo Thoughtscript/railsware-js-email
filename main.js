@@ -6,7 +6,8 @@
  * Main method and application initialization.
  */
 
-const S = require('./server/http')
+const S = require('./server/http'),
+    T = require('./tests')
 
 try {
 
@@ -14,6 +15,8 @@ try {
     process.on('unhandledRejection', rej => console.error(`Unhandled Rejection override: ${rej}`))
     process.on('uncaughtException', exception => console.error(`Error encountered: ${exception}`))
     process.on('exit', msg => console.log(`Service shutting down: ${msg}`))
+
+    T.UNIT_TESTS()
 
     console.info('Initializing server...')
     S.createHttpServer(require('./config').PORT)
