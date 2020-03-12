@@ -1,8 +1,9 @@
 'use strict'
 
-const API = path => `http://localhost:7777/email/${path}`
+// ES6 function notation
+const API = (path) => `http://localhost:7777/email/${path}`
 
-const el = elm => document.getElementById(elm)
+const el = (elm) => document.getElementById(elm)
 
 const asyncDataPost = (url, data, token) => {
     return new Promise((res, rej) => {

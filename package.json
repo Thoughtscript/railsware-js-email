@@ -1,5 +1,5 @@
 {
-  "name": "js-email",
+  "name": "railsware-js-email",
   "version": "1.0.0",
   "description": "Railsware email validation using server-side JavaScript",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Thoughtscript/js-email"
+    "url": "https://github.com/Thoughtscript/railsware-js-email"
   },
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,9 @@
     "AWS"
   ],
   "author": "Adam I. Gerard",
-  "devDependencies": {},
+  "devDependencies": {
+    "lodash.merge": "=4.6.2"
+  },
   "dependencies": {
     "@sendgrid/mail": "=6.5.4",
     "aws-sdk": "=2.630.0",

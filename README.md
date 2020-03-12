@@ -1,4 +1,4 @@
-# js-email
+# railsware-js-email
 
 [![](https://img.shields.io/badge/Mandrill-gray.svg)](https://www.mandrill.com) [![](https://img.shields.io/badge/AWS-SES-Yellow.svg)](https://aws.amazon.com/ses/) [![](https://img.shields.io/badge/Azure-Sendgrid-blue.svg)](https://azuremarketplace.microsoft.com/marketplace/apps/SendGrid.SendGrid) [![](https://img.shields.io/badge/Mailgun-red.svg)](https://graphql.org/code/#javascript) [![](https://img.shields.io/badge/Node.js-13.8.0-yellowgreen.svg)](https://nodejs.org/en/) [![](https://img.shields.io/badge/LICENSE-MIT-red.svg)](./LICENSE)
 
@@ -20,7 +20,7 @@ This repo demonstrates how to use NodeJS for validation, to batch, and send emai
     1. [Mailgun](https://www.mailgun.com)
 
 1. Email attachment handling and batching via the above
-1. Simple [SMS Gateway helper](server/sms) for sending texts
+1. Simple [SMS Gateway helper](tests/helpers) for sending texts
 
 > Email and HTML template validation techniques are described in the [article]()! Unit tests are [also provided](tests/index.js).
 
@@ -72,7 +72,7 @@ Each email endpoint supports `basic`, `attachment`, `batch` like so:
 }
 ```
 
-**Note:** The Mandrill endpoint only supports `basic` emails.
+**Note:** A couple `batch` endpoints are probably best served using a dedicated API through the automation provider - a response message is returned where this is the case.
 
 ### SMS
 

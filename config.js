@@ -15,18 +15,23 @@ module.exports = {
     PUBLIC: "public",
     EMAIL: {
         // May need to add to list of verified tests email account in provider dashboard
-        TEST_EMAIL: "example@email.com",
+        TEST_EMAIL: "test.email@example.com",
         AWS: {
             // These need to be added to the verified email identities list in AWS
             BULK_LIST: ["example@email.com", "example2@email.com"]
         },
         MANDIRLL: {
+            // Test API Key
             API_KEY: "3gs90395[392",
             /**
              * Required for testing
              * Domain must verified as well
              */
-            VERIFIED_EMAIL: "verified@email.com"
+            VERIFIED_EMAIL: "verified@email.com",
+            BULK_LIST: {
+                FIRST: "verified@email.com",
+                SECOND: "verified@email.com"
+            }
         },
         AZURE_SENDGRID: {
             API_KEY: "gae3t5935t9at3itj3'tk3pt3t"

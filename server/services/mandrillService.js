@@ -15,14 +15,16 @@ module.exports = {
         let r = await "Success"
         return r
     },
-    sendBatchEmail: async () => {
-        console.info(`Mandrill batch email is not supported!`)
-        let r = await "Mandrill batch email is not supported!"
+
+    sendEmailWithAttachment: async () => {
+        H.sendEmailWithAttachment(C.VERIFIED_EMAIL, C.VERIFIED_EMAIL, "Mandrill attachment email", "Mandrill attachment email")
+        let r = await "Success!"
         return r
     },
-    sendEmailWithAttachment: async () => {
-        console.info(`Mandrill batch email is not supported!`)
-        let r = await "Mandrill batch email is not supported!"
+
+    sendBatchEmail: async () => {
+        H.sendBatchEmail(C.BULK_LIST, C.VERIFIED_EMAIL, "Mandrill batch email", "Mandrill batch email")
+        let r = await "Success! Also try Mailchimp 3.0 to manage large lists and automate your workflow!"
         return r
     }
 }

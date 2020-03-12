@@ -6,7 +6,7 @@
  * Mandrill SDK helpers.
  */
 
-const SMS = require('../server/sms/gateway')
+const SMS = require('./gateway')
 
 module.exports = {
     testAddress: (address, expected) => {
