@@ -51,7 +51,7 @@ Shut it down:
 
 ```BASH
 npm run stop-linux
-nom run stop-linux
+nom run stop-win
 ```
 
 ### Email API
