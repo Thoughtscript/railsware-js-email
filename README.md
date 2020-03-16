@@ -1,6 +1,6 @@
 # railsware-js-email
 
-[![](https://img.shields.io/badge/Mandrill-gray.svg)](https://www.mandrill.com) [![](https://img.shields.io/badge/AWS-SES-Yellow.svg)](https://aws.amazon.com/ses/) [![](https://img.shields.io/badge/Azure-Sendgrid-blue.svg)](https://azuremarketplace.microsoft.com/marketplace/apps/SendGrid.SendGrid) [![](https://img.shields.io/badge/Mailgun-red.svg)](https://graphql.org/code/#javascript) [![](https://img.shields.io/badge/Node.js-13.8.0-yellowgreen.svg)](https://nodejs.org/en/) [![](https://img.shields.io/badge/LICENSE-MIT-red.svg)](./LICENSE)
+[![](https://img.shields.io/badge/Mandrill-gray.svg)](https://www.mandrill.com) [![](https://img.shields.io/badge/AWS-SES-Yellow.svg)](https://aws.amazon.com/ses/) [![](https://img.shields.io/badge/Azure-Sendgrid-blue.svg)](https://azuremarketplace.microsoft.com/marketplace/apps/SendGrid.SendGrid) [![](https://img.shields.io/badge/Mailgun-red.svg)](https://www.mailgun.com) [![](https://img.shields.io/badge/Node.js-13.8.0-yellowgreen.svg)](https://nodejs.org/en/) [![](https://img.shields.io/badge/LICENSE-MIT-red.svg)](./LICENSE)
 
 [Railsware](https://railsware.com/blog/) code repo for the *JavaScript Email Validation* article.
 
