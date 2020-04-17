@@ -109,7 +109,7 @@ Supplied to create a more realistic example. Be forewarned:
 }
 ```
 
-> POST http://localhost:7777
+> POST http://localhost:7777/api
 
 ```JSON
 {
@@ -201,7 +201,7 @@ Supplied to create a more realistic example. Be forewarned:
 }
 ```
 
-> PUT http://localhost:7777
+> PUT http://localhost:7777/api
 
 ```JSON
 {
