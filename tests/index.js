@@ -36,11 +36,6 @@ const UNIT_TESTS = () => {
     console.info('Validation tests complete...\n')
 }
 
-
-module.exports = {
-    UNIT_TESTS: UNIT_TESTS
-}
-
 /**
  * Stand-alone tests - execute with: $ npm run tests
  */

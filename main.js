@@ -6,8 +6,7 @@
  * Main method and application initialization.
  */
 
-const S = require('./server/http'),
-    T = require('./tests')
+const S = require('./server/http')
 
 try {
 
@@ -16,7 +15,7 @@ try {
     process.on('uncaughtException', exception => console.error(`Error encountered: ${exception}`))
     process.on('exit', msg => console.log(`Service shutting down: ${msg}`))
 
-    T.UNIT_TESTS()
+    require('./tests')
 
     console.info('Initializing server...')
     S.createHttpServer(require('./config').PORT)
