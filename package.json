@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "=6.5.4",
-    "aws-sdk": "=2.630.0",
+    "aws-sdk": "=2.814.0",
     "mailgun.js": "=2.0.1",
     "mandrill-api": "=1.0.45"
   }
